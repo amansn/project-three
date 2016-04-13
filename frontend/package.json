@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "production": "webpack -p",
+    "start": "webpack-dev-server --progress --inline --hot"
   },
   "author": "",
   "license": "ISC",
