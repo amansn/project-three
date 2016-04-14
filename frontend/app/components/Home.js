@@ -1,8 +1,9 @@
 import React from 'react';
-import KEYS from '../config/KEYS';
+
 import axios from 'axios';
 import RestaurantContainer from '../containers/RestaurantContainer';
 import LocationContainer from '../containers/LocationContainer';
+import APIListsContainer from './APIEventsLists/APIListsContainer';
 
 const Home = React.createClass({
   getInitialState: function() {
@@ -19,6 +20,7 @@ const Home = React.createClass({
         <p>Home</p>
         <LocationContainer />
         <RestaurantContainer />
+        <APIListsContainer />
       </div>
     )
   }
