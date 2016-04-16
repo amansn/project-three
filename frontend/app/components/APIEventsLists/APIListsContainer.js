@@ -1,11 +1,11 @@
 import React from 'react';
-import GuideboxList from './GuideBox';
+import GuideBoxContainer from './GuideBoxContainer';
 
 const APIListsContainer = React.createClass({
   render: function(){
     return (
       <div className='api-lists-container'>
-        <GuideboxList />
+        <GuideBoxContainer />
       </div>
     )
   }
