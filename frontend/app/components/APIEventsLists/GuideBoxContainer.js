@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import GuideBoxList from './GuideBox';
+import guideBoxKey from './apiKeys'
 
 
 
@@ -20,7 +21,7 @@ const GuideBoxContainer = React.createClass({
 
 
 ajaxCall: function(){
-    axios.get('https://api-public.guidebox.com/v1.43/US/rKDqDZiPpmsCg2VsdbhDlPMmRr500AC1/shows/all/1/250/all/all')
+    axios.get('http://api-public.guidebox.com/v1.43/US/' + guideBoxKey + '/shows/all/1/250/all/all')
     .then(function(response){
       console.log(response.data);
 
@@ -67,7 +68,7 @@ ajaxCall: function(){
       index: tempIndex,
 
       });
-      axios.get('https://api-public.guidebox.com/v1.43/US/rKDqDZiPpmsCg2VsdbhDlPMmRr500AC1/shows/all/1/250/all/all')
+      axios.get('http://api-public.guidebox.com/v1.43/US/' + guideBoxKey + '/shows/all/1/250/all/all')
       .then(function(response){
         console.log(response.data);
 

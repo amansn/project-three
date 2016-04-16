@@ -7,7 +7,7 @@ const AjaxCalls = React.createClass({
 
 
   const getTVShows = function(){
-    axios.get('http://api-public.guidebox.com/v1.43/US/' + guideBoxKey + '/shows/all/1/1000/all/all')
+    axios.get('http://api-public.guidebox.com/v1.43/US/' + guideBoxKey + '/shows/all/1/250/all/all')
     .then(function(response){
       console.log(response.data);
       this.setState({
