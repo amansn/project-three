@@ -4,7 +4,7 @@ import axios from 'axios';
 import RestaurantContainer from '../containers/RestaurantContainer';
 import LocationContainer from '../containers/LocationContainer';
 import APIListsContainer from './APIEventsLists/APIListsContainer';
-import SearchForm from './Itinerary/SearchForm';
+import SearchFormContainer from './Itinerary/SearchFormContainer';
 
 const Home = React.createClass({
   getInitialState: function() {
@@ -25,7 +25,7 @@ const Home = React.createClass({
         <br></br>
         <APIListsContainer />
         <br></br>
-        <SearchForm />
+        <SearchFormContainer />
       </div>
     )
   }
