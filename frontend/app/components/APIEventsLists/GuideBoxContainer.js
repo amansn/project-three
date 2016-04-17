@@ -11,7 +11,8 @@ const GuideBoxContainer = React.createClass({
   getInitialState: function(){
     return {
       ajaxReturn: [],
-      Return: "ajax return title",
+      ReturnTitle: "ajax return title",
+      ReturnImage: '',
       index: 0,
       objectArray: []
     };
@@ -44,7 +45,8 @@ ajaxCall: function(){
 
       this.setState({
         ajaxReturn: response.data,
-        Return: response.data.results[this.state.index].title
+        ReturnTitle: response.data.results[this.state.index].title,
+        ReturnImage: response.data.results[this.state.index].artwork_448x252
       });
 
 
@@ -91,7 +93,8 @@ ajaxCall: function(){
 
         this.setState({
           ajaxReturn: response.data,
-          Return: response.data.results[this.state.index].title
+          ReturnTitle: response.data.results[this.state.index].title,
+          ReturnImage: response.data.results[this.state.index].artwork_448x252
         });
 
 
@@ -115,9 +118,11 @@ ajaxCall: function(){
     return (
       <div className='guidebox-container'>
         <GuideBoxList
-          Return={this.state.Return}
+          ReturnTitle={this.state.ReturnTitle}
+          ReturnImage={this.state.ReturnImage}
           ajaxCall={this.ajaxCall}
-          IndexStateChange={this.IndexStateChange}/>
+          IndexStateChange={this.IndexStateChange}
+          />
       </div>
     )
   }

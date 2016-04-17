@@ -29,6 +29,9 @@ const SearchForm = React.createClass({
           onChange={this.radioVal}
           />
         <label>Find a specific Event</label>
+        <div className='results-container'>
+          This is where the results will go.
+        </div>
       </div>
     )
   }

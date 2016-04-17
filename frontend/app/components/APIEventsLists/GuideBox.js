@@ -16,7 +16,9 @@ const GuideBoxList = React.createClass({
           onClick={this.props.ajaxCall}>Shows
         </button>
         <div>
-          <h1>{this.props.Return}</h1>
+          <h1>{this.props.ReturnTitle}</h1>
+          <img src={this.props.ReturnImage} alt="Image"/>
+          <br></br>
           <button
             onClick={this.props.IndexStateChange}
             >
