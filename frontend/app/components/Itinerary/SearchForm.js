@@ -9,26 +9,30 @@ const SearchForm = React.createClass({
     return (
       <div className='search-form' style={FormStyle}>
         <p>Search Form Container</p>
-        <input
+        <label>Search for EVERYTHING</label>
+      <button
           className='search-all'
-          type='radio'
-          onChange={this.radioVal}
-          />
-        <label>Search All</label>
+          type='button'
+          onClick={this.props.SearchAllAjaxCall}
+          >Search All</button>
         <br></br>
+        <br></br>
+        <label>Search for particular day</label><span>  </span>
         <input
           className='find-day'
-          type='radio'
-          onChange={this.radioVal}
+          type='text'
+          onChange={this.DayInput}
           />
-        <label>Find by day</label>
+        <button>Search</button>
         <br></br>
+        <br></br>
+        <label>Search for a specific event</label><span>  </span>
         <input
           className='find-event'
-          type='radio'
-          onChange={this.radioVal}
+          type='text'
+          onChange={this.EventInput}
           />
-        <label>Find a specific Event</label>
+        <button>Search</button>
         <div className='results-container'>
           This is where the results will go.
         </div>

@@ -1,7 +1,8 @@
-import bodyParser from 'body-parser';
-import cors from 'cors';
-import express from 'express';
-import mongodb from 'mongodb';
+var express = require('express');
+var cors = require('cors');
+var bodyParser = require('body-parser');
+var mongodb = require('mongodb');
+var app = express();
 
 var app = express();
 
@@ -14,4 +15,8 @@ var mongoUrl = 'mongo://localhost:27017';
 
 app.get('/', function(request, response){
   response.json("frontend is connected to Backend")
+});
+
+app.listen(3000, function(){
+  console.log('port 3000 is up and running');
 });

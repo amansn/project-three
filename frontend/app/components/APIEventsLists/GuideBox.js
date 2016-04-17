@@ -7,22 +7,36 @@ import React from 'react';
 const GuideBoxList = React.createClass({
   render: function(){
     var ListStyle = {
-      border: '3px solid black'
+      border: '3px solid black',
+      display: 'flex',
+      justifyContent: 'space-around'
     }
+
     return(
       <div className='resultList' style={ListStyle}>
-        <p>This is the guidebox container for results</p>
-        <button
-          onClick={this.props.ajaxCall}>Shows
-        </button>
+
         <div>
+          <button
+            onClick={this.props.ajaxCallShows}>Shows
+          </button>
           <h1>{this.props.ReturnTitle}</h1>
-          <img src={this.props.ReturnImage} alt="Image"/>
+          <img src={this.props.ReturnImage}/>
           <br></br>
           <button
-            onClick={this.props.IndexStateChange}
+            onClick={this.props.ShowIndexStateChange}
             >
 
+            Next
+          </button>
+        </div>
+        <div>
+          <button
+            onClick={this.props.ajaxCallMovies}>Movies</button>
+          <h1>{this.props.ReturnMovieTitle}</h1>
+          <img src={this.props.ReturnMovieImage} alt="Movie Image"/>
+          <br></br>
+          <button
+            onClick={this.props.MovieIndexStateChange}>
             Next
           </button>
         </div>
