@@ -4,7 +4,7 @@ const Header = React.createClass({
 
   render: function() {
     return (
-      <h1 className="title">Your Night Out</h1>
+      <h1 className="title">delivery&amp;chill</h1>
     )
   }
 });

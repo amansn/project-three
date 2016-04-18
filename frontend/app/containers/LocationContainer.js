@@ -4,7 +4,9 @@ import Location from '../components/Location';
 const LocationContainer = React.createClass({
   render: function() {
     return (
-      <Location />
+      <div className="location-container">
+        <Location />
+      </div>
     )
   }
 });
